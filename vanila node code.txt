@@ -1,0 +1,42 @@
+==> creating a server
+const http = require('http')
+const app = http();
+
+const server = app.createServer((req , res ) => {
+	// req object some methods
+
+	const url = req.url;
+	const method = req.method;
+	const header = req.header;
+
+	// res object some methods
+
+	res.setHeader('Content-Type' , 'text/html');
+	res.write('<p> hello </p>');
+	return res.end();
+
+	// don't do res.write() after res.end() else it will give error
+} );
+
+server.listen(portNumber, callback);
+// callback is not compulsory but portNumber is
+
+example:- 
+server.listen(portNumber, () => {
+	console.log('server is listening on port 5000');
+}) 
+
+
+==> req object some properties
+
+const url = req.url;
+const method = req.method;
+const header = req.header;
+
+==> res object methods
+
+res.setHeader('Content-Type' , 'text/html'); 
+{ setHeader is not compulsory as express adds correct header by itself }
+
+res.write('<p> hello </p>');
+return res.end();

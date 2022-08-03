@@ -1,0 +1,39 @@
+NODE EXPORT SYNTAX
+
+==> EXPORT SYNTAX - 1
+module.exports = router;
+
+{here when we have to export only one thing  function or class we use this syntax and we do it at the bottom of the code.}
+
+import 
+const anyNameOfYourChoice = require('./router');
+
+{now this varible will be treated as that exported entity which could we a function or class.}
+
+
+==> EXPORT SYNTAX - 2
+module.exports = { key1 : function/class};
+
+{by this syntax we can export multiple values from one file and can access them in another file}
+
+import
+const anyVariableOfYourName = require('./router');
+anyVariableOfYourName.key1 ;
+
+{like this we can access elements of that file and this key1 will be function or class according to export.}
+
+==> EXPORT 3
+alternate syntax for second export
+module.exports.keyName = function/class/variable name
+module.exports.anotherKeyName = function/class/variable name
+and many more key values pair
+
+shortcut for alternate syntax
+exports.keyName = function/class/variable name
+exports.anotherKeyName = function/class/variable name
+and many more key values pair
+
+{ we can remove "module." and can just write exports.keyName }
+==> node methods and little code
+
+
