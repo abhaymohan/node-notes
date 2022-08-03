@@ -1,3 +1,23 @@
+=====> other middlewares
+
+1. bodyparser
+
+const bodyParser = require('body-parser')'
+app.use(bodyParser.urlencoded({extended : false}));
+
+// bodyParser.urlencoded() registers a middleware that parses the body not all but body we 
+// are getting here like form submission data. 
+// this middleware will automatically parse the body of incoming request and will call
+// next automatically to let req reach to other middlewares
+{
+Now this will not parse all kinds of possible bodies, files, json and so on but this will parse bodieslike the one we're getting here, sent through a form. If we have other bodies like files and we'll do that also in this course
+we'll use different parsers and this makes expressjs so extensible. If we need something, we can
+just plug it in.
+}
+
+2. 
+
+
 =====> using express.js
 
 >> npm install express --save
@@ -15,6 +35,7 @@ const app = express();
 
 app.listen(portNumber, optionalCallback); 
 
+
 =====> middleware methods
 
 app.use()               // check only initial match of url
@@ -25,6 +46,10 @@ app.post()   // checks for exact match of url with http method type that is "pos
 =====> utility methods on res object => app.use(req, res, next)
 
 res.send()        // for sending the response
+res.redirect('url') // redirect to this url
+ex - 
+res.redirect('/);
+res.redirect('/home');
 
 ex :- res.send(<p> hello </p>)                // as in node we do not have to specify the  Content-Type header though we could do that but not necessary if we do add a header by ourself than express will use it else it will add correct header by itself and in this case it will add header of "text/html" automatically.
 
