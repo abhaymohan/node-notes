@@ -45,16 +45,49 @@ app.post()   // checks for exact match of url with http method type that is "pos
 
 =====> utility methods on res object => app.use(req, res, next)
 
-res.send()        // for sending the response
-res.redirect('url') // redirect to this url
+1. res.send()        // for sending the response
+ex :- res.send(<p> hello </p>)                // as in node we do not have to specify the  Content-Type header though we could do that but not necessary if we do add a header by ourself than express will use it else it will add correct header by itself and in this case it will add header of "text/html" automatically.
+
+2. res.redirect('url') // redirect to this url
 ex - 
 res.redirect('/);
 res.redirect('/home');
 
-ex :- res.send(<p> hello </p>)                // as in node we do not have to specify the  Content-Type header though we could do that but not necessary if we do add a header by ourself than express will use it else it will add correct header by itself and in this case it will add header of "text/html" automatically.
+3. res.status()
+to add status code with response.
+
+4. res.setHeader()
+to set header by youself.
+
+5. we cal also chain all these methods
+res.setHeader().status().send();
+ex - res.setHeader('Content-Type', 'text/html').status(404).send('<h1>page not found</h1>')
+
 
 =====> utility methods on req object => app.use(req, res, next)
 
+
+
 =====> handling different routes using express
+
+# FILE1.js
+const express = require('express');
+const router = express.Router();       // capital R for express.Router()
+
+router.use('/',() => {
+    console.log('router middleware');
+})
+
+module.exports = router;
+
+
+# FILE2.js
+
+const express = require('express');
+const file1Routes = require('./FILE1');
+
+app.use(file1.routes);
+
+
 
 
