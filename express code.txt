@@ -90,12 +90,9 @@ app.use(file1.routes);
 
 
 ===> serving files statically (lec - 75)
+{for serving files statically we have register a middleware}
 
-{serving files statically means that these files will be sent to the client and in most cases 
-these are css files that are visible on client side.
-so for serving files statically we have register a middleware }
-
-app.use(express.static(path.join(__dirname, 'public')));
+>> app.use(express.static(path.join(__dirname, 'public')));
 
 {we need to give absolute path to files that need to be served statically
 here our files are in public folder so we give path to public folder and all files in public folder will be serves statically}
@@ -103,5 +100,10 @@ here our files are in public folder so we give path to public folder and all fil
 **{To serve static files such as images, CSS files, and JavaScript files, use the express.static built-in middleware function in Express. only these types of files will be served statically by "express.static()" method}
 
 
+{Static content is any content that can be delivered to an end user without having to be generated, modified, or processed. The server delivers the same file to each user, making static content one of the simplest and most efficient content types to transmit over the Internet.}
+
+{serving files statically means that these files will be sent to the client and in most cases 
+these are css files that are visible on client side.
+so for serving files statically we have register a middleware }
 
 
