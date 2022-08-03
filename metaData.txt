@@ -1,0 +1,8 @@
+1. setHeader()
+
+'Content-Type' = 'text/plain' or 'text/html'
+
+2. status code
+
+404 - page not found
+402 - payment requires
