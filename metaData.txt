@@ -6,6 +6,11 @@
 
 404 - page not found
 402 - payment requires
+204 - No Content success status response code 
+{indicates that a request has succeeded, but that the client doesn't need to navigate away from its current page.
+This might be used, for example, when implementing "save and continue editing"}
+ 
+
 
 3. cors free image
 https://cdn.pixabay.com/photo/2016/03/31/20/51/book-1296045_960_720.png
