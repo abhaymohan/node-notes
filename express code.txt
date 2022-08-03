@@ -1,0 +1,35 @@
+=====> using express.js
+
+>> npm install express --save
+-> now in js file
+
+const express = require('express')
+const app = express()                           
+// express returns a function that we have assigned to app;
+
+
+=====> creating and listening on a port
+
+const express = require('express')
+const app = express();
+
+app.listen(portNumber, optionalCallback); 
+
+=====> middleware methods
+
+app.use()               // check only initial match of url
+app.get()             // checks for exact match of url with http method type "get" in this case.
+app.post()   // checks for exact match of url with http method type that is "post" in this case.
+
+
+=====> utility methods on res object => app.use(req, res, next)
+
+res.send()        // for sending the response
+
+ex :- res.send(<p> hello </p>)                // as in node we do not have to specify the  Content-Type header though we could do that but not necessary if we do add a header by ourself than express will use it else it will add correct header by itself and in this case it will add header of "text/html" automatically.
+
+=====> utility methods on req object => app.use(req, res, next)
+
+=====> handling different routes using express
+
+

@@ -1,0 +1,7 @@
+1. the middleware approach is express specific, vanilla nodejs doesnt follow middleware approach for writing code.
+
+2. alternatives :- 
+Adonis.js (a laravel inspired node framework) but not from laravel creator
+Koa, Sail.js , nest.js etc.
+
+3. express.js is by far most popular and most used framework. 

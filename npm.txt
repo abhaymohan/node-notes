@@ -1,0 +1,45 @@
+==> Project dependencies
+body- parser 
+express
+nodemon
+
+
+
+==> dependencies install flag
+1. production dependencies (--save)       ex :-  npm install body-parser --save
+2. development dependencies (--save-dev)   ex:- npm install nodemon --save-dev
+3. globala dependencies (-g)          ex :- npm install nodemon -g   
+
+
+
+
+
+==> production dependencies download
+
+>> npm install express --save 
+>> npm install body-parser --save 
+
+==> development dependencies download
+
+>> npm install nodemon --save-dev
+
+
+==> commands
+>> node -v
+// to check the version of nodejs installed in your pc if it is not installed than this command will give an error
+
+>> node 
+// it will take you in node environment where you can do REPL (read evaluate print loop )
+// on js expressions
+
+>> .exit
+// to exit node environment (from that repl environment)
+
+>> npm install package_name  --save-dev                    // to install new package from npm which is for development dependency
+ex :- npm install nodemon --save-dev                               // no space between save and dev it is => --save-dev
+
+>> npm install package_name  --save                          // to install a package as production dependency
+ex :- npm install body-parser --save
+
+>> npm install package_name -g                         // to add a dependency globally so that use can use it from terminal
+ex :- npm install nodemon -g
