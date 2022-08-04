@@ -24,3 +24,5 @@ or directly add this middleware ->
 
 5. sequelize
 in place of "findById()" use "findByPk()"
+
+
