@@ -22,6 +22,13 @@ app.use((req,res,next) => {
 // 404.ejs file in views folder which we have specified in 
 // app.set() method.
 
+app.use((req,res,next) => {
+    res.status(404).render('subfolder/404', {pageTitle : 'page not found' , path:''});
+})
+
+// so here the template file lies in a subfolder in views do we specify path to the file 
+// from the views folder specified in app.set('views', 'views_folder_name')
+
 EJS 
 
 Theory
