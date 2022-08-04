@@ -1,0 +1,22 @@
+
+we have tried out 3 webpage templates pug, handlebars and ejs and choosed ejs as 
+webpage template for our website.
+
+EJS 
+
+Theory
+1.we don't have layout functionalites in ejs but we can have similar functionality 
+by partials.
+{layouts basically allow you to extend a template code for other code}
+
+package install
+>> npm install ejs --save
+
+
+syntax
+1. <% %>            // any valid js code
+2. <%= %>           // for variable
+3. <%- %>
+
+
+
