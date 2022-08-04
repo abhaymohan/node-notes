@@ -2,11 +2,31 @@
 we have tried out 3 webpage templates pug, handlebars and ejs and choosed ejs as 
 webpage template for our website.
 
+ADDING TEMPLATE USING EXPRESS 
+
+app.set('view engine', 'ejs');     // telling express template we are using
+app.set('views', 'views');         // specifying folder where our template files are
+
+// in case of template we do not need to specify the complete the path but with 
+// app.set('views', 'views') we had specified that our views are in views folder at same level
+// as main js file.
+
+// for telling express to render these template than we use 
+// .render() method
+
+app.use((req,res,next) => {
+    res.status(404).render('404', {pageTitle : 'page not found' , path:''});
+})
+
+// render serach for file specified in first argument which is '404' so it will search
+// 404.ejs file in views folder which we have specified in 
+// app.set() method.
+
 EJS 
 
 Theory
 1.we don't have layout functionalites in ejs but we can have similar functionality 
-by partials.
+by partials or includes.
 {layouts basically allow you to extend a template code for other code}
 
 package install
@@ -17,6 +37,12 @@ syntax
 1. <% %>            // any valid js code
 2. <%= %>           // for variable
 3. <%- %>
+4. partial logic
+<%- include('relative path form this file') %>
+ex: <%- include('./includes/end.ejs') %>
+partials basically replace this include with ejs code in file specified in path.
+
+
 
 
 

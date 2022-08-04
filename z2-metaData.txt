@@ -15,6 +15,7 @@ This might be used, for example, when implementing "save and continue editing"}
 3. cors free image
 https://cdn.pixabay.com/photo/2016/03/31/20/51/book-1296045_960_720.png
 
+
 4. everything in console outputting twice  =>  
 https://stackoverflow.com/a/35408810
 
