@@ -107,3 +107,8 @@ these are css files that are visible on client side.
 so for serving files statically we have register a middleware }
 
 
+===> webpage template
+app.set('view-engine' , 'ejs');
+app.set('views', 'views_files_folder');
+
+res.render('template_file_name_path_views_folder', {data to be passed to that template});
